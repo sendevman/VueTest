@@ -10,6 +10,8 @@
     </div>
 
     <BookList :books="books" :editBook="editBook" :deleteBook="deleteBook" />
+    
+    <StackQueue />
   </div>
 </template>
 
@@ -17,9 +19,10 @@
 import axios from 'axios';
 import BookList from './components/BookList.vue';
 import BookForm from './components/BookForm.vue';
+import StackQueue from './components/StackQueue.vue';
 
 export default {
-  components: { BookList, BookForm },
+  components: { BookList, BookForm, StackQueue },
   data() {
     return {
       books: [],
